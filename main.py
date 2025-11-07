@@ -5,7 +5,7 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 from PIL import Image
 import io
-import win32clipboard
+#import win32clipboard
 import holidays
 
 ############ Acessando planilha pelo google planilhas ############
@@ -100,10 +100,10 @@ def copy_matplotlib_fig_to_clipboard(fig):
     data = output.getvalue()[14:]
     output.close()
     
-    win32clipboard.OpenClipboard()
-    win32clipboard.EmptyClipboard()
-    win32clipboard.SetClipboardData(win32clipboard.CF_DIB, data)
-    win32clipboard.CloseClipboard()
+    # win32clipboard.OpenClipboard()
+    # win32clipboard.EmptyClipboard()
+    # win32clipboard.SetClipboardData(win32clipboard.CF_DIB, data)
+    # win32clipboard.CloseClipboard()
     
 # Transformação de dados
 db["Data"] = pd.to_datetime(db["Data"], errors="coerce", dayfirst=True)
