@@ -9,13 +9,11 @@ import win32clipboard
 import holidays
 
 ############ Acessando planilha pelo google planilhas ############
-csv_url = "16NNk8Mt7qptvmBz3l0LjS2sgqDazs78CRQjKsZcKtaw"
-gid = "1302928052"
-final_url = f"https://docs.google.com/spreadsheets/d/{csv_url}/gviz/tq?tqx=out:csv&gid={gid}"
+
+final_url = f"https://docs.google.com/spreadsheets/d/{st.secrets["csv_url"]}/gviz/tq?tqx=out:csv&gid={st.secrets["gid"]}"
 db = pd.read_csv(final_url)
 
-gid_SGT = "2009872723"
-final_url_SGT = f"https://docs.google.com/spreadsheets/d/{csv_url}/gviz/tq?tqx=out:csv&gid={gid_SGT}"
+final_url_SGT = f"https://docs.google.com/spreadsheets/d/{st.secrets["csv_url"]}/gviz/tq?tqx=out:csv&gid={st.secrets["gid_SGT"]}"
 db_SGT = pd.read_csv(final_url_SGT)
 
 ############ preprocessamento ############
